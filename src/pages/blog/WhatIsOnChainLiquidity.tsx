@@ -14,7 +14,7 @@ export function WhatIsOnChainLiquidity() {
         On-chain liquidity represents one of the greatest innovations brought by decentralized finance (DeFi).
         Unlike the traditional model, where banks and institutional market makers provide the necessary liquidity 
         for markets to function, in the blockchain environment this liquidity is provided by the users themselves in 
-        the form of smart contracts, called <strong>Automated Market Makers (AMMs)</strong>.
+        the form of smart contracts, called <a href="https://www.coindesk.com/learn/what-is-an-automated-market-maker/" target="_blank" rel="noopener noreferrer"><strong>Automated Market Makers (AMMs)</strong></a>.
       </p>
 
       <h3>How Does Liquidity Work?</h3>

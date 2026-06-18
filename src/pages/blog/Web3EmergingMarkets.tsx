@@ -22,7 +22,7 @@ export function Web3EmergingMarkets() {
         For developers, entrepreneurs, and businesses in developing regions, integrating with the world through classic methods 
         often hits high compliance friction and restrictive operating fees. Web3 equalizes this. 
         A programmer anywhere can deploy financial solutions whose results compete directly in the international 
-        market without going through expensive gateways.
+        market without going through expensive gateways. This trend of accelerated adoption in emerging markets has been consistently highlighted in industry reports by organizations like <a href="https://www.chainalysis.com/blog/2023-global-crypto-adoption-index/" target="_blank" rel="noopener noreferrer">Chainalysis</a>.
       </p>
 
       <h3>Initiatives and Community</h3>

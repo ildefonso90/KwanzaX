@@ -27,7 +27,7 @@ export function StablecoinsEconomy() {
       <h3>Stablecoins in the KwanzaX Ecosystem</h3>
       <p>
         As a high-tech bridge operating end-to-end on-chain, compatibility 
-        with pairs of the market's largest stablecoins (USDT, USDC, among others) offers users 
+        with pairs of the market's largest stablecoins (like <a href="https://tether.to/" target="_blank" rel="noopener noreferrer">USDT</a>, <a href="https://www.circle.com/en/usdc" target="_blank" rel="noopener noreferrer">USDC</a>, among others) offers users 
         the ultimate combination:
       </p>
       
