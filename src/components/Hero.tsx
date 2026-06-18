@@ -47,7 +47,7 @@ export function Hero() {
           >
             <div className="absolute left-0 top-0 bottom-0 w-14 sm:w-16 bg-gradient-to-r from-purple-800/40 to-transparent mix-blend-screen pointer-events-none" />
             <span className="relative z-10 mr-4 ml-1 sm:ml-2 sm:mr-6 tracking-[0.18em] uppercase font-bold">
-              Apresentando KwanzaX
+              Introducing KwanzaX
             </span>
             <motion.span
               animate={{ opacity: [0.4, 1, 0.4], rotate: [0, 6, 0] }}
@@ -59,16 +59,16 @@ export function Hero() {
           </motion.div>
 
           <h1 className="mt-6 max-w-xl text-[2.8rem] font-sans font-bold leading-[0.98] tracking-[0.06em] text-white sm:text-5xl lg:text-[4rem]">
-            O FUTURO DAS
+            THE FUTURE OF
             <br />
-            FINANÇAS DIGITAIS
+            GLOBAL DIGITAL
             <br />
-            GLOBAIS
+            FINANCE
           </h1>
 
           <p className="mt-5 max-w-lg text-sm leading-relaxed text-white/65 sm:text-base">
-            Uma infraestrutura financeira digital pensada para liquidez internacional,
-            liquidação eficiente e confiança operacional em escala.
+            A digital financial infrastructure designed for international liquidity,
+            efficient settlement, and operational trust at scale.
           </p>
         </motion.div>
 
@@ -96,7 +96,7 @@ export function Hero() {
                 className="absolute left-[-10%] top-[12%] hidden text-[#1a1a1a] text-5xl font-black tracking-tighter mix-blend-difference sm:block lg:left-[-20%] lg:text-6xl"
                 style={{ transform: 'translateZ(-100px)' }}
               >
-                Nós
+                On
               </motion.div>
 
               <motion.img

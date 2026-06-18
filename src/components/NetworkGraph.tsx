@@ -38,7 +38,7 @@ export function NetworkGraph() {
         const json = await res.json();
 
         if (!json.pairs || json.pairs.length === 0) {
-          console.log('Token não listado ou sem liquidez, usando dados de reserva.');
+          console.log('Token not listed or without liquidity, using fallback data.');
           return;
         }
 
@@ -58,7 +58,7 @@ export function NetworkGraph() {
           const basePrice = price * (0.3 + 0.7 * Math.pow(progress, 1.5));
           const noise = 1 + Math.sin(i * 1.2) * 0.1 + Math.cos(i * 3.7) * 0.05;
           return {
-            name: `Dia ${i + 1}`,
+            name: `Day ${i + 1}`,
             price: i === 29 ? price : Math.max(0, basePrice * noise),
             volume: 0,
             liquidity: 0,
@@ -67,7 +67,7 @@ export function NetworkGraph() {
 
         setData(history);
       } catch (err) {
-        console.error('Falha ao buscar dados', err);
+        console.error('Failed to fetch data', err);
       }
     }
 
@@ -111,10 +111,10 @@ export function NetworkGraph() {
         >
           <h2 className="mb-4 flex items-center justify-center gap-3 text-2xl font-bold tracking-tight text-white sm:text-3xl md:justify-start">
             <Activity className="text-[#10b981]" size={26} />
-            Indicadores de mercado
+            Market Indicators
           </h2>
           <p className="mx-auto max-w-2xl text-sm leading-relaxed text-white/60 md:mx-0 sm:text-base">
-            Dados de preço, liquidez e capitalização apresentados de forma objetiva para leitura rápida no celular.
+            Price, liquidity, and capitalization data presented objectively for quick reading on mobile.
           </p>
         </motion.div>
 
@@ -128,7 +128,7 @@ export function NetworkGraph() {
           <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-5 backdrop-blur-md transition-colors hover:bg-white/[0.04] lg:col-span-1">
             <div className="mb-2 flex items-center justify-between">
               <span className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-white/55 font-medium">
-                <CircleDollarSign size={14} /> Preço
+                <CircleDollarSign size={14} /> Price
               </span>
               <span className={`flex items-center text-xs font-mono font-medium ${isPositive ? 'text-[#10b981]' : 'text-[#ef4444]'}`}>
                 {isPositive ? <ArrowUpRight size={14} /> : <ArrowDownRight size={14} />}
@@ -142,17 +142,17 @@ export function NetworkGraph() {
 
           <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-5 backdrop-blur-md transition-colors hover:bg-white/[0.04]">
             <span className="mb-2 flex items-center gap-1.5 text-xs uppercase tracking-wider text-white/55 font-medium">
-              <Coins size={14} /> Par
+              <Coins size={14} /> Pair
             </span>
             <span className="text-xl font-mono font-bold tracking-tight text-white">
               {stats.quoteSymbol}
             </span>
-            <span className="mt-2 text-sm text-white/55">{stats.priceNative.toFixed(6)} valor nativo</span>
+            <span className="mt-2 text-sm text-white/55">{stats.priceNative.toFixed(6)} native value</span>
           </div>
 
           <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-5 backdrop-blur-md transition-colors hover:bg-white/[0.04]">
             <span className="mb-2 flex items-center gap-1.5 text-xs uppercase tracking-wider text-white/55 font-medium">
-              <Droplets size={14} /> Liquidez
+              <Droplets size={14} /> Liquidity
             </span>
             <span className="text-xl font-mono font-bold tracking-tight text-white">
               {formatCompact(stats.liquidity)}
@@ -161,7 +161,7 @@ export function NetworkGraph() {
 
           <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-5 backdrop-blur-md transition-colors hover:bg-white/[0.04]">
             <span className="mb-2 flex items-center gap-1.5 text-xs uppercase tracking-wider text-white/55 font-medium">
-              <TrendingUp size={14} /> Capitalização
+              <TrendingUp size={14} /> Market Cap
             </span>
             <span className="text-xl font-mono font-bold tracking-tight text-white">
               {formatCompact(stats.marketCap)}
@@ -170,7 +170,7 @@ export function NetworkGraph() {
 
           <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-5 backdrop-blur-md transition-colors hover:bg-white/[0.04]">
             <span className="mb-2 flex items-center gap-1.5 text-xs uppercase tracking-wider text-white/55 font-medium" title="Fully Diluted Valuation">
-              <Activity size={14} /> Valuation diluído
+              <Activity size={14} /> FDV
             </span>
             <span className="text-xl font-mono font-bold tracking-tight text-white">
               {formatCompact(stats.fdv)}
@@ -216,7 +216,7 @@ export function NetworkGraph() {
               <Area
                 type="monotone"
                 dataKey="price"
-                name="Preço USD"
+                name="Price USD"
                 stroke={isPositive ? '#10b981' : '#ef4444'}
                 strokeWidth={3}
                 fillOpacity={1}

@@ -4,23 +4,23 @@ import { Shield, Zap, Globe, Lock } from 'lucide-react';
 const FEATURE_DATA = [
   {
     icon: <Globe className="w-6 h-6 text-[#10b981]" />,
-    title: 'Alcance internacional',
-    description: 'Conexão com mercados globais sem depender de uma estrutura bancária tradicional.',
+    title: 'International Reach',
+    description: 'Connection with global markets without depending on a traditional banking structure.',
   },
   {
     icon: <Zap className="w-6 h-6 text-[#3b82f6]" />,
-    title: 'Liquidação rápida',
-    description: 'Transferências e liquidação em tempo real para manter o fluxo operacional contínuo.',
+    title: 'Fast Settlement',
+    description: 'Real-time transfers and settlement to keep the operational flow continuous.',
   },
   {
     icon: <Shield className="w-6 h-6 text-[#8b5cf6]" />,
-    title: 'Segurança institucional',
-    description: 'Arquitetura pensada para auditoria, integridade dos ativos e confiança de longo prazo.',
+    title: 'Institutional Security',
+    description: 'Architecture designed for auditing, asset integrity, and long-term trust.',
   },
   {
     icon: <Lock className="w-6 h-6 text-[#f59e0b]" />,
-    title: 'Protocolo sem intermediários',
-    description: 'Execução via contratos inteligentes para reduzir atrito, custos ocultos e dependências.',
+    title: 'Borderless Protocol',
+    description: 'Execution via smart contracts to reduce friction, hidden costs, and dependencies.',
   },
 ];
 
@@ -40,13 +40,13 @@ export function Features() {
           className="mb-12 text-center"
         >
           <span className="mb-4 block text-[10px] font-medium uppercase tracking-[0.3em] text-white/45 sm:text-sm sm:tracking-[0.22em]">
-            Principais diferenciais
+            Key Differentiators
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Construído para confiança, velocidade e escala
+            Built for trust, speed, and scale
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/58 sm:text-base">
-            Uma estrutura de apresentação enxuta, com foco nos elementos que importam para um projeto de cripto.
+            A lean presentation structure, focusing on the elements that matter for a crypto ecosystem.
           </p>
         </motion.div>
 

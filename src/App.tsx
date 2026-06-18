@@ -3,41 +3,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { AnimatePresence, motion } from 'motion/react';
-import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Features } from './components/Features';
-import { LoadingScreen } from './components/LoadingScreen';
-import { TokenSnapshot } from './components/TokenSnapshot';
-import { NetworkGraph } from './components/NetworkGraph';
+import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { WhatIsOnChainLiquidity } from './pages/blog/WhatIsOnChainLiquidity';
+import { HowKwanzaxWorks } from './pages/blog/HowKwanzaxWorks';
+import { Web3EmergingMarkets } from './pages/blog/Web3EmergingMarkets';
+import { StablecoinsEconomy } from './pages/blog/StablecoinsEconomy';
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => setIsLoading(false), 1800);
-    return () => window.clearTimeout(timer);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-[#0A0A0A] overflow-x-hidden font-sans">
-      <AnimatePresence mode="wait">
-        {isLoading && <LoadingScreen key="loading-screen" />}
-      </AnimatePresence>
-
-      <motion.div
-        initial={false}
-        animate={{ opacity: isLoading ? 0 : 1, y: isLoading ? 16 : 0 }}
-        transition={{ duration: 0.7, ease: 'easeOut' }}
-        className="relative z-10"
-      >
-        <Navbar />
-        <Hero />
-        <TokenSnapshot />
-        <Features />
-        <NetworkGraph />
-      </motion.div>
+    <div className="min-h-screen bg-[#0A0A0A] overflow-x-hidden font-sans flex flex-col">
+      <Navbar />
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog/what-is-on-chain-liquidity" element={<WhatIsOnChainLiquidity />} />
+          <Route path="/blog/how-kwanzax-works" element={<HowKwanzaxWorks />} />
+          <Route path="/blog/web3-in-emerging-markets" element={<Web3EmergingMarkets />} />
+          <Route path="/blog/stablecoins-in-the-economy" element={<StablecoinsEconomy />} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }

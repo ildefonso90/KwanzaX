@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react';
 const CONTRACT_ADDRESS = '0xeFF64BA0D6456a32E7FF9DdD68B67a60b60e9b1c';
 
 const FACTS = [
-  { label: 'Status da rede', value: 'Ativo on-chain' },
-  { label: 'Liquidez', value: 'Monitorada em DEX' },
-  { label: 'Foco do ativo', value: 'Pagamentos globais' },
+  { label: 'Network Status', value: 'Active on-chain' },
+  { label: 'Liquidity', value: 'Monitored on DEX' },
+  { label: 'Asset Focus', value: 'Global payments' },
 ];
 
 function shortenAddress(address: string) {
@@ -29,7 +29,7 @@ export function TokenSnapshot() {
       await navigator.clipboard.writeText(CONTRACT_ADDRESS);
       setCopied(true);
     } catch {
-      window.prompt('Copie o endereço do contrato', CONTRACT_ADDRESS);
+      window.prompt('Copy contract address', CONTRACT_ADDRESS);
     }
   }
 
@@ -49,13 +49,13 @@ export function TokenSnapshot() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[10px] uppercase tracking-[0.26em] text-white/70">
             <ShieldCheck className="h-4 w-4 text-[#10b981]" />
-            Resumo on-chain
+            On-chain Summary
           </div>
           <h2 className="mt-5 font-heading text-3xl font-semibold uppercase tracking-[0.04em] text-white md:text-5xl">
-            Endereço do contrato
+            Contract Address
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
-            Um painel curto e objetivo para que o usuário encontre o endereço oficial, copie com segurança e siga para o mercado.
+            A short and objective dashboard for users to find the official address, copy it securely, and head to the market.
           </p>
         </motion.div>
 
@@ -73,7 +73,7 @@ export function TokenSnapshot() {
                   <Sparkles className="h-5 w-5 text-[#d4af37]" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Endereço oficial</p>
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Official Address</p>
                   <h3 className="mt-1 text-lg font-semibold uppercase tracking-[0.08em] text-white sm:text-xl">
                     {shortenAddress(CONTRACT_ADDRESS)}
                   </h3>
@@ -93,14 +93,14 @@ export function TokenSnapshot() {
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-black transition-colors hover:bg-white/90"
                 >
                   {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                  {copied ? 'Endereço copiado' : 'Copiar endereço'}
+                  {copied ? 'Address copied' : 'Copy address'}
                 </button>
                 <a
                   href="#network"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80 transition-colors hover:bg-white/[0.06]"
                 >
                   <ExternalLink className="h-4 w-4" />
-                  Ver dados de mercado
+                  View market data
                 </a>
               </div>
             </div>
@@ -130,9 +130,9 @@ export function TokenSnapshot() {
             ))}
 
             <div className="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-5">
-              <p className="text-[10px] uppercase tracking-[0.26em] text-white/45">Observação</p>
+              <p className="text-[10px] uppercase tracking-[0.26em] text-white/45">Note</p>
               <p className="mt-3 text-sm leading-relaxed text-white/60">
-               KwanzaX.digital a Solução.
+               KwanzaX.digital the Solution.
               </p>
             </div>
           </motion.div>

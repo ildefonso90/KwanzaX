@@ -7,13 +7,27 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kwanzax.digital/#features</loc>
+    <loc>https://kwanzax.digital/blog/what-is-on-chain-liquidity</loc>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kwanzax.digital/#network</loc>
-    <changefreq>daily</changefreq>
+    <loc>https://kwanzax.digital/blog/how-kwanzax-works</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwanzax.digital/blog/web3-in-emerging-markets</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwanzax.digital/blog/stablecoins-in-the-economy</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
