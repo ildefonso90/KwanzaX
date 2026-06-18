@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { ExternalLink, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-const X_URL = 'https://x.com/KwanzaX';
+const X_URL = 'https://x.com/KwanzaXoficial?s=11';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
