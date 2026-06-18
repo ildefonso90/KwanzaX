@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { Features } from '../components/Features';
 import { LoadingScreen } from '../components/LoadingScreen';
@@ -8,11 +9,24 @@ import { NetworkGraph } from '../components/NetworkGraph';
 
 export function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const timer = window.setTimeout(() => setIsLoading(false), 1800);
     return () => window.clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (!isLoading && location.hash) {
+      // Small timeout to ensure DOM is updated after AnimatePresence
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [isLoading, location]);
 
   return (
     <>

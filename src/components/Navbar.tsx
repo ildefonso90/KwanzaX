@@ -18,15 +18,15 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-[10px] tracking-[0.22em] uppercase font-medium text-gray-300">
-          <a href="#tokenomics" className="hover:text-white transition-colors">
+          <Link to="/#tokenomics" className="hover:text-white transition-colors">
             Contract
-          </a>
-          <a href="#features" className="hover:text-white transition-colors">
+          </Link>
+          <Link to="/#features" className="hover:text-white transition-colors">
             Features
-          </a>
-          <a href="#network" className="hover:text-white transition-colors">
+          </Link>
+          <Link to="/#network" className="hover:text-white transition-colors">
             Network
-          </a>
+          </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-3 shrink-0">
@@ -56,15 +56,15 @@ export function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-[#0A0A0A] absolute top-full left-0 right-0 p-6 flex flex-col gap-4 border-b border-gray-800"
         >
-          <a href="#tokenomics" className="text-gray-300 hover:text-white text-sm uppercase tracking-widest">
+          <Link to="/#tokenomics" className="text-gray-300 hover:text-white text-sm uppercase tracking-widest" onClick={() => setIsOpen(false)}>
             Contract
-          </a>
-          <a href="#features" className="text-gray-300 hover:text-white text-sm uppercase tracking-widest">
+          </Link>
+          <Link to="/#features" className="text-gray-300 hover:text-white text-sm uppercase tracking-widest" onClick={() => setIsOpen(false)}>
             Features
-          </a>
-          <a href="#network" className="text-gray-300 hover:text-white text-sm uppercase tracking-widest">
+          </Link>
+          <Link to="/#network" className="text-gray-300 hover:text-white text-sm uppercase tracking-widest" onClick={() => setIsOpen(false)}>
             Network
-          </a>
+          </Link>
           <a
             href={X_URL}
             target="_blank"

@@ -11,6 +11,7 @@ import { WhatIsOnChainLiquidity } from './pages/blog/WhatIsOnChainLiquidity';
 import { HowKwanzaxWorks } from './pages/blog/HowKwanzaxWorks';
 import { Web3EmergingMarkets } from './pages/blog/Web3EmergingMarkets';
 import { StablecoinsEconomy } from './pages/blog/StablecoinsEconomy';
+import { NotFound } from './pages/NotFound';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/blog/how-kwanzax-works" element={<HowKwanzaxWorks />} />
           <Route path="/blog/web3-in-emerging-markets" element={<Web3EmergingMarkets />} />
           <Route path="/blog/stablecoins-in-the-economy" element={<StablecoinsEconomy />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
