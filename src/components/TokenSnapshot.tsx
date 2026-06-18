@@ -132,7 +132,7 @@ export function TokenSnapshot() {
             <div className="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-5">
               <p className="text-[10px] uppercase tracking-[0.26em] text-white/45">Observação</p>
               <p className="mt-3 text-sm leading-relaxed text-white/60">
-                Se você me enviar o perfil oficial do X, eu substituo o link placeholder e deixo o botão apontando para a conta correta.
+               KwanzaX.digital a Solução.
               </p>
             </div>
           </motion.div>
