@@ -36,6 +36,11 @@ export function Footer() {
                 Stablecoins in the Economy
               </Link>
             </li>
+            <li>
+              <Link to="/about-us" className="text-sm text-white/60 hover:text-[#d4af37] transition-colors">
+                About Us
+              </Link>
+            </li>
           </ul>
         </div>
 

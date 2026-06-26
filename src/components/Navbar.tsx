@@ -27,6 +27,9 @@ export function Navbar() {
           <Link to="/#network" className="hover:text-white transition-colors">
             Network
           </Link>
+          <Link to="/about-us" className="hover:text-white transition-colors">
+            About Us
+          </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-3 shrink-0">
@@ -64,6 +67,9 @@ export function Navbar() {
           </Link>
           <Link to="/#network" className="text-gray-300 hover:text-white text-sm uppercase tracking-widest" onClick={() => setIsOpen(false)}>
             Network
+          </Link>
+          <Link to="/about-us" className="text-gray-300 hover:text-white text-sm uppercase tracking-widest" onClick={() => setIsOpen(false)}>
+            About Us
           </Link>
           <a
             href={X_URL}

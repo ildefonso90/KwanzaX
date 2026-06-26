@@ -11,6 +11,7 @@ import { WhatIsOnChainLiquidity } from './pages/blog/WhatIsOnChainLiquidity';
 import { HowKwanzaxWorks } from './pages/blog/HowKwanzaxWorks';
 import { Web3EmergingMarkets } from './pages/blog/Web3EmergingMarkets';
 import { StablecoinsEconomy } from './pages/blog/StablecoinsEconomy';
+import { AboutUs } from './pages/AboutUs';
 import { NotFound } from './pages/NotFound';
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/blog/what-is-on-chain-liquidity" element={<WhatIsOnChainLiquidity />} />
           <Route path="/blog/how-kwanzax-works" element={<HowKwanzaxWorks />} />
           <Route path="/blog/web3-in-emerging-markets" element={<Web3EmergingMarkets />} />
